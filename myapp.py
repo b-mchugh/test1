@@ -13,7 +13,7 @@ class RH(BaseHTTPRequestHandler):
 		message = ['myapp test1' + 'Client: ' + self.address_string() + '<br>',
 					'Server: ' + IP + ' aka ' + hostname + '<br>',
 					'Date: ' + self.date_time_string() + '<br>']
-		message.append(pip.get_installed_distributions(local_only=True)
+		message.append(pip.get_installed_distributions(local_only=True))
 		for i in message:
 			print(i)
 			self.wfile.write(bytes(i, "utf8"))
