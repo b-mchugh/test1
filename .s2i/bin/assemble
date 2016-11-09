@@ -27,7 +27,7 @@ if [[ -f setup.py ]]; then
 fi
 
 echo "---> pip install start ..."
-pip install pep8
+pip install --user pep8
 echo "---> pip install end ..."
 
 if should_collectstatic; then
