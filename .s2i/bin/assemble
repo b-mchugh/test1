@@ -26,9 +26,7 @@ if [[ -f setup.py ]]; then
   python setup.py develop --user
 fi
 
-echo "---> pip install start ..."
-pip install --user pep8
-echo "---> pip install end ..."
+echo "---> pip install was here ..."
 
 if should_collectstatic; then
   (
