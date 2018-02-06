@@ -10,7 +10,7 @@ class RH(BaseHTTPRequestHandler):
 		self.send_response(200)
 		self.send_header('Content-type','text/html')
 		self.end_headers()
-		message = ['Client: ' + self.address_string() + '<br>',
+		message = ['Router: ' + self.address_string() + '<br>',
 			'Pod: ' + IP + ' aka ' + hostname + '<br>',
 			'Date: ' + self.date_time_string() + '<br>']
 		message.append(str(pip.get_installed_distributions(local_only=True)))
