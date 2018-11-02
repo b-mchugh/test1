@@ -11,7 +11,7 @@ class RH(BaseHTTPRequestHandler):
 		self.end_headers()
 		message = ['test1' + 'Client: ' + self.address_string() + '<br>',
 					'Server: ' + IP + ' aka ' + hostname + '<br>',
-					'Date: ' + self.date_time_string() + '<br>']
+					'Date: ' + self.date_time_string() + '<br>' + '\n']
 		for i in message:
 			print(i)
 			self.wfile.write(bytes(i, "utf8"))
