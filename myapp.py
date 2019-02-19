@@ -15,6 +15,7 @@ class RH(BaseHTTPRequestHandler):
 			'Date: ' + self.date_time_string() + '<br>']
 		message.append(str(pip.get_installed_distributions(local_only=True)))
 		for i in message:
+			print("\033[33m Hello")
 			print(i)
 			self.wfile.write(bytes(i, "utf8"))
 		return
