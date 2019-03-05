@@ -12,7 +12,8 @@ class RH(BaseHTTPRequestHandler):
 		self.end_headers()
 		message = ['Router: ' + self.address_string() + '<br>',
 			'Pod: ' + IP + ' aka ' + hostname + '<br>',
-			'Date: ' + self.date_time_string() + '<br>']
+			'Date: ' + self.date_time_string() + '<br>'
+			'D1']
 		message.append(str(pip.get_installed_distributions(local_only=True)))
 		for i in message:
 			print(i)
